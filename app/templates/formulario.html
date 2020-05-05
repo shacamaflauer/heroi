@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ super() }} - Cadastro{% endblock %}
+{% block login %}
+
+<li class="nav-item">
+  <a class="nav-link" href="login">Login (Entrar)</a>
+</li>
+
+{% endblock %}
+
+
+{% block content %}
+<div align="center">
+
+  <div class="col-md-3 col-md-offset-4">
+    <h1 class="display-3" align="left">Cadastro</h1>
+<form action="" method="post">
+  {{ form.csrf_token }}
+
+  <div class="form-group" align="left">
+    <label>CPF</label>
+    {{ form.cpf_pessoa(class="form-control", placeholder="999.999.999-99") }}
+  </div>
+  <div class="form-group" align="left">
+    <label>Nome Completo</label>
+    {{ form.nome_pessoa(class="form-control", placeholder="Nome Completo") }}
+  </div>
+  <div class="form-group" align="left">
+    <label>Endereço</label>
+    {{ form.endereco(class="form-control", placeholder="Rua") }}
+  </div>
+  <div class="form-group" align="left">
+    <label>Nº</label>
+    {{ form.numero(class="form-control", placeholder="nº 999") }}
+  </div>
+  <div class="form-group" align="left">
+    <label>Bairro</label>
+    {{ form.bairro(class="form-control", placeholder="Centro") }}
+  </div>
+  <div class="form-group" align="left">
+    <label>Cidade</label>
+    {{ form.cidade(class="form-control", placeholder="Camboriu") }}
+  </div>
+  <div class="form-group" align="left">
+    <label>Celular (WhatsApp)</label>
+    {{ form.celular(class="form-control", placeholder="(99) 9-9999-9999") }}
+  </div>
+  <div class="form-group" align="left">
+    <label>Senha</label>
+    {{ form.senha(class="form-control", placeholder="") }}
+  </div>
+  <button href="" type="submit" class="btn btn-primary btn-lg">Salvar</button>
+  <button type="reset" class="btn btn-primary btn-lg"
+          onclick="window.location.href='index'">Voltar</button>
+</form>
+</div>
+</div>
+{% endblock%}

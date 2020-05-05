@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ super() }} - Login{% endblock %}
+
+{% block content %}
+<div align="center">
+
+  <div class="col-md-3 col-md-offset-10">
+    <h1 class="display-3" align="left">Login</h1>
+<form action="" method="post">
+  {{ form.csrf_token }}
+
+  <div class="form-group" align="left">
+    <label>CPF</label>
+    {{ form.cpf_login(class="form-control", placeholder="999.999.999-99") }}
+  </div>
+  <div class="form-group" align="left">
+    <label>Senha</label>
+    {{ form.senha_login(class="form-control", placeholder="") }}
+  </div>
+  <button type="submit" class="btn btn-primary btn-lg">Entrar</button>
+  <button type="reset" class="btn btn-primary btn-lg"
+          onclick="window.location.href='index'">Voltar</button>
+</form>
+</div>
+</div>
+{% endblock%}

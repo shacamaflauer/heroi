@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ super() }} - Início{% endblock %}
+
+{% block login %}
+
+<li class="nav-item">
+  <a class="nav-link" href="login">Login (Entrar)</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="cadastro">Cadastrar Usuário</a>
+</li>
+
+
+{% endblock %}
+
+
+{% block content %}
+
+ <div class="container">
+    <!-- Jumbotron Header -->
+    <header class="jumbotron my-4">
+      <h1 class="display-3">Seja você o Heroi</h1>
+      <p class="lead">...</p>
+      <div class="container" align="center">
+        <a href="login" class="btn btn-danger btn-lg">DOAR Agora!</a>
+      </div>
+    </header>
+ </div>
+
+<!-- Page Content -->
+  <div class="container">
+    <!-- Page Features -->
+    <div class="row text-center">
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="static/fotos/doadores.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">DOADOR</h4>
+            <p class="card-text">Faça uma doação para um fornecedor, que entrega a sua doação na casa da familia certa.</p>
+          </div>
+          <a href="cadastro" class="btn btn-primary">Escolher</a>
+          <div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="static/fotos/familia.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">FAMILIA CARENTE</h4>
+            <p class="card-text">Alimente sua mesa. Cadastre seu pedido de ajuda, somos todos únidos pela vida.</p>
+          </div><a href="cadastro" class="btn btn-primary">Escolher</a>
+          <div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="static/fotos/entregador.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">ENTREGADOR</h4>
+            <p class="card-text">Venha ser um entregador voluntário, suas entregas ajudam o seu bairro e a região.</p>
+          </div>
+          <a href="cadastro" class="btn btn-primary">Escolher</a>
+          <div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="static/fotos/fornecedores.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">FORNECEDOR</h4>
+            <p class="card-text">Cadastre sua empresa com preço acessível, você é a ponte dessa união que salva vidas.</p>
+          </div>
+          <a href="cadastro" class="btn btn-primary">Escolher</a>
+          <div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+     </div>
+
+  </div>
+  <!-- /.container -->
+{% endblock %}
